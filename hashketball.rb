@@ -286,3 +286,21 @@ def winning_team
   end
   victor
 end
+
+def player_with_longest_name
+  char = 0
+  long_name = ""
+  game_hash.each {|place, team|
+    team.each {|attribute, data|
+      if attribute == :players
+        data.each {|players|
+          if players[:player_name].length > char
+            char = players[:player_name].length
+            long_name = players[:player_name]
+          end
+        }
+      end
+    }
+  }
+  long_name
+end
