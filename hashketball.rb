@@ -259,3 +259,11 @@ def most_points_scored
   }
   scorer
 end
+
+def team_final_score(team)
+  
+end
+
+def winning_team
+  
+end
