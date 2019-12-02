@@ -264,9 +264,17 @@ def team_final_score(location)
   score = 0
   game_hash.each {|place, team|
     if place == location
+      team.each {|attribute, data|
+        if attribute = :players
+          data.each {|players|
+            score += players[:points]
+          }
+        end
+      }
       
     end
   }
+  score
 end
 
 def winning_team
