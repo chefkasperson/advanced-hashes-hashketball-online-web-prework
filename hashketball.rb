@@ -260,8 +260,13 @@ def most_points_scored
   scorer
 end
 
-def team_final_score(team)
-  
+def team_final_score(location)
+  score = 0
+  game_hash.each {|place, team|
+    if place == location
+      
+    end
+  }
 end
 
 def winning_team
