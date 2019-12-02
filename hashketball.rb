@@ -278,5 +278,11 @@ def team_final_score(location)
 end
 
 def winning_team
-  
+  victor = ""
+  if team_final_score(:home) > team_final_score(:away)
+    victor = game_hash[:home][:team_name]
+  elsif team_final_score(:home) < team_final_score(:away)
+    vicor = game_hash[:away][:team_name]
+  end
+  victor
 end
